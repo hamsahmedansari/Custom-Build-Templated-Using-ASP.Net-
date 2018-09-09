@@ -1,0 +1,23 @@
+.w-80 {
+    width: 80%;
+}
+
+@media (max-width: 576px) {
+    .w-md-100 {
+        width: 100% !important;
+    }
+}
+aside.left-panel {
+    width: initial !important;
+}
+.c-fadein{
+    animation:fad .5s ease-in-out;
+}
+@keyframes fad{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}

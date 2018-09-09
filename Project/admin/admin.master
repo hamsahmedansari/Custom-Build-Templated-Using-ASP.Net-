@@ -1,0 +1,169 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin.master.cs" Inherits="admin_admin" %>
+<!-- 
+    ------- Author's ------
+
+    --- Hams Ahmed Ansari ---
+    ----- Email : Hams.Ahmed.Ansari95@gmail.com -------
+    ----- Website : https://hams.cf ------
+
+    --- Mumtaz Ahmed Siddiui ---
+    ----- Email : mumtaz.sid995@gmail.com -------
+    ----- Website : http://mumtazsiddiqui.cf ------
+
+    --- Murtaz Ali ---
+    ----- Email : ali7murtaza@gmail.com -------
+    ----- Website : http://murtazaali.ga ------
+    
+-->
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+        <title>Admin </title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="images/pn.png">
+        <link rel="shortcut icon" href="images/pn.png">
+
+        <link rel="stylesheet" href="assets/css/normalize.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/themify-icons.css">
+        <link rel="stylesheet" href="assets/css/flag-icon.min.css">
+        <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
+        <link rel="stylesheet" href="assets/scss/style.css">
+        <link href="assets/css/lib/vector-map/jqvmap.min.css" rel="stylesheet">
+        <link href="assets/css/custom.css" rel="stylesheet" />
+    
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+
+
+
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+
+   
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+
+
+        
+        <!-- Left Panel -->
+
+    <aside id="left-panel" class="left-panel">
+        <nav class="navbar navbar-expand-sm navbar-default">
+
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#"><img src="images/logo1.png" alt="Logo"></a>
+            </div>
+
+            <div id="main-menu" class="main-menu collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+
+                    <li class="cu_basic active ci_li">
+                        <a href="Basic-Info"> <i class="menu-icon fa fa-user-o"></i>Basic</a>
+                    </li>
+                    <li class=" cu_slider ci_li">
+                        <a href="Slider"> <i class="menu-icon fa-tag fa"></i>Slider</a>
+                    </li>
+                    <li class=" cu_nav ci_li">
+                        <a href="Navigation"> <i class="menu-icon fa fa-clone"></i>Navigation</a>
+                    </li>
+                    <li class=" cu_about ci_li">
+                        <a href="About"> <i class="menu-icon fa fa-edit"></i> <asp:Label ID="nvabout" runat="server">  About us </asp:Label></a>
+                    </li>
+                    <li class=" cu_section_3 ci_li">
+                        <a href="Section3"> <i class="menu-icon fa fa-eyedropper"></i> <asp:Label ID="nvsection3" runat="server"> Section 3 </asp:Label></a>
+                    </li>
+                    <li class=" cu_gallery ci_li">
+                        <a href="Gallery"> <i class="menu-icon fa fa-folder-open"></i>Gallery</a>
+                    </li>
+                    <li class=" cu_section_4 ci_li">
+                        <a href="Section4"> <i class="menu-icon fa fa-flash"></i> <asp:Label ID="nvsection4" runat="server"> Section 4 </asp:Label></a>
+                    </li>
+                    <li class=" cu_contact ci_li">
+                        <a href="Contact"> <i class="menu-icon fa fa-pencil-square"></i>Contact</a>
+                    </li>
+                    <h3 class="menu-title">Developer</h3>
+                    <li>
+                        <a href="http://theprofessionals.com.pk/" target="_blank"> <i class="menu-icon fa fa-external-link-square	"></i>theprofessionals</a>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </nav>
+    </aside><!-- /#left-panel -->
+
+
+        
+    <div id="right-panel" class="right-panel w-100 w-md-100 ">
+
+          <!-- Header-->
+        <header id="header" class="header">
+
+            <div class="header-menu">
+
+                <div class="col-sm-7">
+                    <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
+                    <h5 style="line-height:2;" >
+                        <asp:Label CssClass="change_text_of_header" runat="server" ID="header_from_master"></asp:Label>
+                    </h5>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="user-area dropdown float-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img class="user-avatar rounded-circle" src="images/m1.png" alt="User Avatar">
+                        </a>
+
+                        <div class="user-menu dropdown-menu">
+
+                                <asp:LinkButton OnClick="logout_Click"  ID="logout" runat="server" CssClass="nav-link"  ><i class="fa fa-power -off"></i>Logout</asp:LinkButton>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+
+        </header><!-- /header -->
+        <!-- Header-->
+
+    
+        <asp:ContentPlaceHolder id="body" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        
+    </div><!-- /#right-panel -->
+
+        
+    </div>
+
+
+        <script src="assets/js/vendor/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+   
+
+    </form>
+</body>
+</html>
